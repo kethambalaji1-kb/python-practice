@@ -1,0 +1,12 @@
+def is_anagram(s, t):
+    # Two strings can only be anagrams if they have the same length
+    if len(s) != len(t):
+        return False
+    
+    # Compare sorted characters of both strings
+    return sorted(s) == sorted(t)
+
+if __name__ == "__main__":
+    s = input().strip()
+    t = input().strip()
+    print(is_anagram(s, t))
